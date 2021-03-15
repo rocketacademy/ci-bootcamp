@@ -21,15 +21,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-      with:
-        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: "dry-everglades-81776" #Must be unique in Heroku
-        heroku_email: "akira@awongh.com"
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
