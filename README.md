@@ -1,3 +1,1 @@
-# Rocket Academy Coding Bootcamp
-
-## Continuous Integration
+# Rocket Academy Coding Bootcamp: Continuous Integration
